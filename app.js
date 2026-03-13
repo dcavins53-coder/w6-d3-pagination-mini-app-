@@ -32,5 +32,15 @@ li.textContent =`${item.name}-${item.species}`
 results.appendChild(li)
     });
 }
-//prevous
+previous.addEventListener('click', () => {
+if (currentPage > 1) {
+currentPage--;
 fetchCharacters(currentPage);
+}
+});
+
+next.addEventListener('click', () => {
+currentPage++;
+fetchCharacters(currentPage);
+
+});
